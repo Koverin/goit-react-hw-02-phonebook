@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Box } from './Section.styled';
 
 export const Section = ({ children }) => {
-  return <div>{children}</div>;
+  return <Box>{children}</Box>;
 };
 
 Section.propTypes = {

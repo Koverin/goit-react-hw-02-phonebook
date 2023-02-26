@@ -1,20 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { List, ListItem, Title } from './ContactList.styled';
 
 export const ContactList = ({ contacts, onDeletedContact }) => {
   return (
-    <ul>
+    <List>
       {contacts.map(({ id, name, number }) => (
-        <li key={id}>
-          <p>
+        <ListItem key={id}>
+          <Title>
             {name}: {number}
-          </p>
+          </Title>
           <button type="button" onClick={() => onDeletedContact(id)}>
             Delete
           </button>
-        </li>
+        </ListItem>
       ))}
-    </ul>
+    </List>
   );
 };
 
